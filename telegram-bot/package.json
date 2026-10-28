@@ -1,0 +1,14 @@
+{
+  "name": "repair-landing-telegram-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Локальный сервер для отправки заявок с лендинга «МастерДом» в Telegram.",
+  "scripts": {
+    "start": "node server.js",
+    "chat-id": "node get-chat-id.js",
+    "test": "node test-lead.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -2,12 +2,22 @@
 // Лендинг: форма заявки, валидация и отправка
 // ============================================================
 
-// Чтобы форма отправляла заявки по-настоящему:
-// 1. Зарегистрируйтесь на https://formspree.io
-// 2. Создайте форму и скопируйте endpoint вида
-//    https://formspree.io/f/abcdwxyz
-// 3. Вставьте его в FORM_ENDPOINT ниже.
-const FORM_ENDPOINT = '';
+// Куда отправлять заявки.
+//
+// 1. Локальный Telegram-бот:
+//    запустите `npm start` в папке `telegram-bot` и откройте
+//    http://127.0.0.1:8787/ — сервер сам подставит /api/lead.
+//
+// 2. Formspree или другой backend:
+//    вставьте URL endpoint в FORM_ENDPOINT_OVERRIDE ниже.
+//
+// 3. GitHub Pages:
+//    это статический сайт, поэтому без внешнего backend
+//    форма работает в демо-режиме.
+const FORM_ENDPOINT_OVERRIDE = '';
+
+const endpointMeta = document.querySelector('meta[name="form-endpoint"]');
+const FORM_ENDPOINT = FORM_ENDPOINT_OVERRIDE || (endpointMeta?.content.trim() ?? '');
 
 const form = document.getElementById('lead-form');
 const formStatus = document.getElementById('form-status');

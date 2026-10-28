@@ -15,7 +15,8 @@ https://v1reless.github.io/repair-landing/
 - форма заявки с валидацией имени, телефона, услуги и согласия;
 - состояния загрузки, успеха и ошибки;
 - демо-режим без отправки данных;
-- поддержка Formspree для реальной отправки заявок;
+- локальный Telegram-бот для реальной отправки заявок;
+- поддержка Formspree как альтернативы;
 - доступность: подписи полей, `aria-invalid`, `aria-describedby`, фокус.
 
 ## Стек
@@ -23,26 +24,52 @@ https://v1reless.github.io/repair-landing/
 - HTML
 - CSS
 - JavaScript
+- Node.js — только для локального Telegram-бота, без зависимостей
 
 Без фреймворков, CDN и сборщиков.
 
 ## Как запустить
 
-Открыть `index.html` в браузере или использовать Live Server в VS Code.
+### Вариант 1. С Telegram-ботом
 
-Лучше через локальный сервер:
+```powershell
+cd D:\projects\repair-landing\telegram-bot
+npm start
+```
+
+Открыть:
+
+```text
+http://127.0.0.1:8787/
+```
+
+Заявки будут уходить в Telegram. Подробная настройка — в [`telegram-bot/README.md`](telegram-bot/README.md).
+
+### Вариант 2. Просто посмотреть лендинг
+
+Открыть `index.html` в браузере или запустить статический сервер:
 
 ```powershell
 python -m http.server 8000
 ```
 
-И открыть:
+Открыть:
 
-```
+```text
 http://localhost:8000
 ```
 
+В этом режиме форма работает в демо-режиме и никуда не отправляет данные.
+
 ## Как подключить реальную отправку
+
+### Telegram-бот
+
+Самый простой вариант для локальной проверки — папка `telegram-bot`. Сервер сам подставляет endpoint `/api/lead` в HTML, поэтому менять `script.js` не нужно.
+
+Инструкция: [`telegram-bot/README.md`](telegram-bot/README.md).
+
+### Formspree
 
 1. Зарегистрируйтесь на [Formspree](https://formspree.io).
 2. Создайте форму.
@@ -50,7 +77,7 @@ http://localhost:8000
 4. Откройте `script.js` и вставьте его:
 
 ```js
-const FORM_ENDPOINT = 'https://formspree.io/f/abcdwxyz';
+const FORM_ENDPOINT_OVERRIDE = 'https://formspree.io/f/abcdwxyz';
 ```
 
 После этого заявки будут уходить на почту, а демо-подпись под формой исчезнет.
@@ -69,8 +96,11 @@ const FORM_ENDPOINT = 'https://formspree.io/f/abcdwxyz';
 - `style.css` — стили;
 - `script.js` — форма и логика;
 - `favicon.svg` — иконка;
+- `telegram-bot/` — локальный Node.js-сервер для отправки заявок в Telegram;
 - `AGENTS.md` — правила для AI-агента.
 
 ## Важно
 
-Это демо-проект. Форма в текущем виде не отправляет данные на сервер, а только имитирует отправку.
+На GitHub Pages форма работает в демо-режиме, потому что Pages — статический хостинг и не выполняет Node.js-сервер.
+
+Реальная отправка в Telegram работает локально через `telegram-bot/server.js`. Для публичного сайта понадобится серверный хостинг: Vercel, Render, Railway или VPS.
