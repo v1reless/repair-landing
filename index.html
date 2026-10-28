@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Демо-лендинг для мастера по ремонту квартир: услуги, цены, этапы работы и форма заявки.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="МастерДом — ремонт квартир под ключ">
+  <meta property="og:description" content="Косметический и капитальный ремонт, отделка под ключ. Смета, сроки и гарантия 3 года.">
+  <meta property="og:url" content="https://v1reless.github.io/repair-landing/">
+  <meta name="theme-color" content="#f6f3ee">
+  <title>МастерДом — ремонт квартир под ключ</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="МастерДом — на главную">
+        <span class="logo__mark" aria-hidden="true">М</span>
+        <span class="logo__text">
+          <strong>МастерДом</strong>
+          <small>ремонт квартир</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#works">Работы</a>
+        <a href="#process">Как работаем</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="header__contacts">
+        <a class="header__phone" href="tel:+79990000000">+7 (999) 000-00-00</a>
+        <a class="button button--small" href="#form">Оставить заявку</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow">Ремонт квартир в Москве и области</p>
+          <h1>Ремонт, после которого не хочется переделывать</h1>
+          <p class="hero__text">
+            Косметический и капитальный ремонт, отделка под ключ.
+            Фиксированная смета, сроки в договоре и гарантия 3 года.
+          </p>
+          <div class="hero__actions">
+            <a class="button" href="#form">Рассчитать стоимость</a>
+            <a class="button button--ghost" href="#works">Смотреть работы</a>
+          </div>
+          <dl class="stats">
+            <div>
+              <dt>12 лет</dt>
+              <dd>опыта</dd>
+            </div>
+            <div>
+              <dt>180+</dt>
+              <dd>квартир</dd>
+            </div>
+            <div>
+              <dt>3 года</dt>
+              <dd>гарантии</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__compare">
+            <div class="hero__side hero__side--before">
+              <span>До</span>
+            </div>
+            <div class="hero__side hero__side--after">
+              <span>После</span>
+            </div>
+          </div>
+          <div class="hero__badge">
+            <strong>Смета за 1 день</strong>
+            <span>без скрытых доплат</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Почему с нами спокойно</p>
+          <h2 id="benefits-title">Берём на себя весь ремонт</h2>
+        </div>
+        <div class="benefits">
+          <article class="benefit">
+            <span class="benefit__num">01</span>
+            <h3>Смета не растёт</h3>
+            <p>Фиксируем стоимость в договоре. Доплаты — только если вы сами меняете задачу.</p>
+          </article>
+          <article class="benefit">
+            <span class="benefit__num">02</span>
+            <h3>Сроки в договоре</h3>
+            <p>За каждую неделю просрочки по нашей вине — компенсация. Без отговорок.</p>
+          </article>
+          <article class="benefit">
+            <span class="benefit__num">03</span>
+            <h3>Гарантия 3 года</h3>
+            <p>На все работы. Если что-то пойдёт не так — приедем и исправим.</p>
+          </article>
+          <article class="benefit">
+            <span class="benefit__num">04</span>
+            <h3>Свои мастера</h3>
+            <p>Без случайных бригад. За качество отвечает один прораб.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Услуги и цены</p>
+          <h2 id="services-title">Выберите формат ремонта</h2>
+          <p class="section__lead">Точная стоимость — после замера. Ниже — ориентиры, чтобы было проще сравнивать.</p>
+        </div>
+
+        <div class="services">
+          <article class="service-card">
+            <p class="service-card__label">Косметический</p>
+            <h3>Освежить квартиру</h3>
+            <p class="service-card__price">от 4 500 ₽<span>/ м²</span></p>
+            <ul class="service-card__list">
+              <li>Стены, потолки, полы</li>
+              <li>Замена обоев и краски</li>
+              <li>Мелкий ремонт электрики</li>
+            </ul>
+            <p class="service-card__term">Срок: 3–5 недель</p>
+            <a class="service-card__link" href="#form">Рассчитать →</a>
+          </article>
+
+          <article class="service-card service-card--featured">
+            <p class="service-card__badge">Чаще всего выбирают</p>
+            <p class="service-card__label">Капитальный</p>
+            <h3>Заменить всё</h3>
+            <p class="service-card__price">от 7 900 ₽<span>/ м²</span></p>
+            <ul class="service-card__list">
+              <li>Демонтаж и черновые работы</li>
+              <li>Электрика и сантехника</li>
+              <li>Чистовая отделка</li>
+            </ul>
+            <p class="service-card__term">Срок: 6–10 недель</p>
+            <a class="service-card__link" href="#form">Рассчитать →</a>
+          </article>
+
+          <article class="service-card">
+            <p class="service-card__label">Под ключ</p>
+            <h3>Заехать и жить</h3>
+            <p class="service-card__price">от 11 500 ₽<span>/ м²</span></p>
+            <ul class="service-card__list">
+              <li>Дизайн-проект и закупки</li>
+              <li>Все работы и мебель</li>
+              <li>Финальная уборка</li>
+            </ul>
+            <p class="service-card__term">Срок: 8–12 недель</p>
+            <a class="service-card__link" href="#form">Рассчитать →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Как проходит работа</p>
+          <h2 id="process-title">Четыре понятных этапа</h2>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">1</span>
+            <h3>Замер и бриф</h3>
+            <p>Приезжаем, смотрим квартиру и обсуждаем задачи. Бесплатно, около часа.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <h3>Смета и план</h3>
+            <p>Присылаем смету, график работ и список материалов. Без мелкого шрифта.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <h3>Ремонт</h3>
+            <p>Работаем по этапам. Каждую неделю — фотоотчёт и понятный статус.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">4</span>
+            <h3>Приёмка и гарантия</h3>
+            <p>Проходим чек-лист вместе с вами. Подписываем акт и даём гарантию 3 года.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--surface" id="works" aria-labelledby="works-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Примеры работ</p>
+          <h2 id="works-title">Недавние проекты</h2>
+          <p class="section__lead">Демо-карточки для портфолио. В реальном проекте здесь будут фотографии объектов.</p>
+        </div>
+
+        <div class="works">
+          <article class="work-card work-card--kitchen">
+            <div class="work-card__content">
+              <p class="work-card__tag">Капитальный ремонт</p>
+              <h3>Кухня-гостиная, 42 м²</h3>
+              <p>Москва, ЖК «Северный парк»</p>
+            </div>
+          </article>
+          <article class="work-card work-card--bedroom">
+            <div class="work-card__content">
+              <p class="work-card__tag">Косметический ремонт</p>
+              <h3>Спальня, 18 м²</h3>
+              <p>Московская область, Одинцово</p>
+            </div>
+          </article>
+          <article class="work-card work-card--bathroom">
+            <div class="work-card__content">
+              <p class="work-card__tag">Отделка под ключ</p>
+              <h3>Санузел, 6 м²</h3>
+              <p>Москва, ЖК «Ривер Парк»</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="form" aria-labelledby="form-title">
+      <div class="container form-layout">
+        <div class="form-intro">
+          <p class="eyebrow">Бесплатный расчёт</p>
+          <h2 id="form-title">Рассчитаем стоимость ремонта</h2>
+          <p>
+            Оставьте заявку — перезвоним в течение 15 минут, зададим 3–4 вопроса
+            и назовём вилку цен. Без навязывания услуг.
+          </p>
+          <ul class="checklist">
+            <li>Замер и консультация — бесплатно</li>
+            <li>Смета в течение 1 дня</li>
+            <li>Работаем по договору</li>
+          </ul>
+        </div>
+
+        <form class="form" id="lead-form" novalidate>
+          <div class="form__row">
+            <div class="field">
+              <label class="field__label" for="name">Имя</label>
+              <input
+                class="field__input"
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Как к вам обращаться?"
+                autocomplete="name"
+                minlength="2"
+                maxlength="80"
+                required
+              >
+              <span class="field__error" id="name-error" hidden></span>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="phone">Телефон</label>
+              <input
+                class="field__input"
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="+7 (999) 000-00-00"
+                autocomplete="tel"
+                inputmode="tel"
+                required
+              >
+              <span class="field__error" id="phone-error" hidden></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="service">Что нужно сделать?</label>
+            <select class="field__input" id="service" name="service" required>
+              <option value="">Выберите вид работ</option>
+              <option value="cosmetic">Косметический ремонт</option>
+              <option value="capital">Капитальный ремонт</option>
+              <option value="turnkey">Отделка под ключ</option>
+              <option value="other">Другое</option>
+            </select>
+            <span class="field__error" id="service-error" hidden></span>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="message">Комментарий <span class="field__optional">необязательно</span></label>
+            <textarea
+              class="field__input field__input--textarea"
+              id="message"
+              name="message"
+              rows="4"
+              maxlength="500"
+              placeholder="Площадь, адрес, сроки — всё, что важно знать заранее"
+            ></textarea>
+          </div>
+
+          <div class="field field--consent">
+            <label class="checkbox">
+              <input id="consent" name="consent" type="checkbox" required>
+              <span>Согласен на обработку персональных данных</span>
+            </label>
+            <span class="field__error" id="consent-error" hidden></span>
+          </div>
+
+          <button class="button button--submit" type="submit">Получить расчёт</button>
+
+          <p class="form__note" id="form-note">
+            Демо-режим: заявка не отправляется на сервер.
+          </p>
+
+          <p class="form__status" id="form-status" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer__grid">
+      <div>
+        <a class="logo logo--footer" href="#top" aria-label="МастерДом — на главную">
+          <span class="logo__mark" aria-hidden="true">М</span>
+          <span class="logo__text">
+            <strong>МастерДом</strong>
+            <small>ремонт квартир</small>
+          </span>
+        </a>
+        <p class="footer__text">
+          Демо-лендинг для портфолио. Контакты и цены — пример.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="footer__title">Контакты</h2>
+        <p><a href="tel:+79990000000">+7 (999) 000-00-00</a></p>
+        <p><a href="mailto:hello@masterdom.example">hello@masterdom.example</a></p>
+        <p>Москва, ул. Примерная, 10</p>
+      </div>
+
+      <div>
+        <h2 class="footer__title">Разделы</h2>
+        <p><a href="#services">Услуги</a></p>
+        <p><a href="#works">Работы</a></p>
+        <p><a href="#form">Оставить заявку</a></p>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> МастерДом. Демо-проект на чистом HTML, CSS и JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
